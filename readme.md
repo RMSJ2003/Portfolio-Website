@@ -1,4 +1,9 @@
-References:
+How to Run:
+1. Open VS Code and its terminal (bash).
+2. cd over to the root folder of this project.
+3. node index.js
+
+Resources:
 
 Here's how offsetTop works:
     - It measures the distance between the top border of the current element and the top border of its offset parent element.
