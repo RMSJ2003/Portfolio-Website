@@ -1,6 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
-import { portfolios, skills, identity, socials, fullName } from "./websiteContent.js";
+import { portfolios, skills, identity, socials, fullName, experiences, contacts } from "./websiteContent.js";
 
 const app = express();
 const port = 3000;
@@ -19,7 +19,9 @@ app.get("/", (req, res) => {
         req: req, // Pass the req object to the template
         identity: identity,
         socials: socials,
-        fullName: fullName
+        fullName: fullName,
+        experiences: experiences,
+        contacts: contacts,
     });
 });
 

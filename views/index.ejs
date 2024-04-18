@@ -26,13 +26,13 @@
                         <div id="line">
                         </div>                        
                         <% socials.forEach(social => { %>
-                            <a href="<%= social.link %>" target="_blank" id="<%= social.id %>" class="social-icon"></a>
+                            <a href="<%= social.link %>" target="_blank" id="<%= social.class %>" class="social-icon"></a>
                             <style>
-                                #<%= social.id %> {
+                                #<%= social.class %> {
                                     background-image: url("<%= social.imgURL %>");
                                 }
     
-                                #<%= social.id %>:hover {
+                                #<%= social.class %>:hover {
                                     background-image: url("<%= social.hoveredImgURL %>");
                                 }
                             </style>

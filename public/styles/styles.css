@@ -1060,14 +1060,20 @@ h1 {
 }
 
 .exp-desc {
+    width: 80%;
     margin: 0;
     font-family: var(--first-font);
     color: var(--first-color);
+    line-height: 1.5; /* Adjust the value to increase or decrease spacing */
 }
 
 @media screen and (max-width: 800px) {
     .glowing-circle {
         width: 15px;
+    }
+
+    .exp-desc {
+        width: 100%;
     }
 }
 

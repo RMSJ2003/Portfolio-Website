@@ -5,39 +5,63 @@ const identity = [
     "College Student",
 ];
 
+const contacts = [
+    {
+        displayText: "richardmontemayorsahagunjr@gmail.com",
+        imgSource: "/images/email-logo.png",
+        imgAlt: "email logo",
+        link: "mailto:richardmontemayorsahagunjr@gmail.com",
+        target: "_blank",
+    },
+    {
+        displayText: "0915-477-0790",
+        imgSource: "/images/phone-logo.png",
+        imgAlt: "phone logo",
+        link: "tel:09154770790",
+        target: "_blank",
+    },
+    {
+        displayText: "Makati City, Philippines",
+        imgSource: "/images/location-logo.png",
+        imgAlt: "location logo",
+        link: "https://maps.app.goo.gl/1gqmoHvuGdeJJdk68",
+        target: "_blank",
+    },
+];
+
 const socials = [
     {
-        id: "fbIcon",
+        class: "fb-icon",
         link: "https://www.facebook.com/richard.sahagun.14/",
         imgURL: "/images/fb-icon.png",
         hoveredImgURL: "/images/hovered-fb-icon.png",
     },
     {
-        id: "linkedinIcon",
+        class: "linkedin-icon",
         link: "https://www.linkedin.com/in/richard-sahagun/",
         imgURL: "/images/linkedin-icon.png",
         hoveredImgURL: "/images/hovered-linkedin-icon.png",
     },
     {
-        id: "indeedIcon",
+        class: "indeed-icon",
         link: "https://profile.indeed.com/p/richards-43q2ksj",
         imgURL: "/images/indeed-icon.png",
         hoveredImgURL: "/images/hovered-indeed-icon.png",
     },
     {
-        id: "fiverrIcon",
+        class: "fiverr-icon",
         link: "https://www.fiverr.com/rj_2003?public_mode=true",
         imgURL: "/images/fiverr-icon.png",
         hoveredImgURL: "/images/hovered-fiverr-icon.png",
     },
     {
-        id: "igIcon",
+        class: "ig-icon",
         link: "https://www.instagram.com/richard.sahagun.jr/",
         imgURL: "/images/ig-icon.png",
         hoveredImgURL: "/images/hovered-ig-icon.png",
     },
     {
-        id: "ytIcon",
+        class: "yt-icon",
         link: "https://www.youtube.com/channel/UCeYcJEoIktdp2jiPT2yj8kA",
         imgURL: "/images/yt-icon.png",
         hoveredImgURL: "/images/hovered-yt-icon.png",
@@ -57,6 +81,24 @@ const portfolios = [
         alt: "macrocare showcase",
         link: "https://github.com/RMSJ2003/MacroCare",
     },
+];
+
+const experiences = [
+    {
+        year: "2021",
+        role: "Web Developer & Assistant Manager",
+        company: "Speedwave Event Sounds Rental",
+        desc: `
+        In 2021, I worked as a Web Developer at Speedwave Event Sounds Rental, a top provider of audio-visual equipment for events. My role involved 
+        boosting the company's online presence and expanding its market reach. I collaborated with management to understand offerings and audience, 
+        then built a dynamic website to showcase our extensive services and equipment inventory. Challenges included designing a user-friendly 
+        interface to highlight LED walls, speakers, stages, and more. I also took on Assistant Manager responsibilities, managing operational tasks 
+        like quotations, emails, and customer interactions across platforms. Additionally, I handled administrative duties such as billing 
+        statements and contracts, ensuring smooth transactions and compliance. As Assistant Manager, I coordinated with internal teams to fulfill 
+        customer needs efficiently, fostering collaboration for exceptional results. My dual role demonstrated commitment, adaptability, and 
+        leadership, contributing to business growth and customer satisfaction.        
+        `,
+    }
 ];
 
 const skills = [
@@ -117,4 +159,4 @@ const skills = [
     },
 ];
 
-export { fullName, portfolios, skills, identity, socials }
+export { fullName, portfolios, skills, identity, socials, experiences, contacts }

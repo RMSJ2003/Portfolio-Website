@@ -5,33 +5,20 @@
         <div class="contact-header-right-line"></div>
     </div>
     <div id="contactInfosContainer">
-        <div class="contact-info-container">
-            <img src="/images/email-logo.png" alt="email logo">
-            <a href="#">
-                <h4>richardmontemayorsahagunjr@gmail.com</h4>
-            </a>
-        </div>
-        <div class="contact-info-container">
-            <img src="/images/phone-logo.png" alt="phone logo">
-            <a href="#">
-                <h4>0912345</h4>
-            </a>
-        </div>
-        <div class="contact-info-container">
-            <img src="/images/location-logo.png" alt="location logo">
-            <a href="#">
-                <h4>Makati City, Philippines</h4>
-            </a>
-        </div>
+        <% contacts.forEach(contact => { %>
+            <div class="contact-info-container">
+                <img src="<%= contact.imgSource %>" alt="<%= contact.imgAlt %>">
+                <a href="<%= contact.link %>" target="<%= contact.target %>">
+                    <h4><%= contact.displayText %></h4>
+                </a>
+            </div>
+        <% }) %>
     </div>
     <div class="contact-socials-container">
         <div class="contact-socials-left-line"></div>
-        <div id="fbIcon" class="social-icon"></div>
-        <div id="linkedinIcon" class="social-icon"></div>
-        <div id="indeedIcon" class="social-icon"></div>
-        <div id="fiverrIcon" class="social-icon"></div>
-        <div id="igIcon" class="social-icon"></div>
-        <div id="ytIcon" class="social-icon"></div>
+        <% socials.forEach(social => { %>
+            <a href="<%= social.link %>" target="_blank" id="<%= social.class %>" class="social-icon"></a>
+        <% }) %>
         <div class="contact-socials-right-line"></div>
     </div>
 </div>
