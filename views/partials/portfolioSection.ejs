@@ -1,0 +1,199 @@
+<div id="portfolioPage">
+    <div id="portfolioSection">
+        <h2 class="header">Portfolio</h2>
+        <% const portfoliosToDisplay = searchResult || portfolios %>
+        <% for( let i = 0; i < portfoliosToDisplay.length; i++ ) { %>
+            <% if (i % 6 === 0) { %>
+                <div class="portfolio-grid fade">
+            <% } %>
+            <div class="portfolio-item">
+                <a href="<%= portfoliosToDisplay[i].link %>" target="_blank">
+                    <img src="<%= portfoliosToDisplay[i].imgSource %>" alt="<%= portfoliosToDisplay[i].alt %>" class="portfolio" onmouseover="mouseOverPortfolio(this)" onmouseout="mouseOutPortfolio(this)">  
+                </a>
+                <h4 class="portfolio-name">
+                    <a href="<%= portfoliosToDisplay[i].link %>" target="_blank" onmouseover="mouseOverPortfolio(this)" onmouseout="mouseOutPortfolio(this)">
+                        <%= portfoliosToDisplay[i].name %>
+                    </a>
+                </h4>
+            </div>
+            <% if (i % 6 === 5 || i === portfoliosToDisplay.length - 1)  { %>
+                </div>
+            <% } %>
+        <% } %>
+        
+        <div class="portfolio-dots">
+            <% for( let i = 0; i < portfoliosToDisplay.length / 6; i++ ) { %>
+                <div class="dot" onclick="currentSlide(<%= i + 1 %>)"></div>
+            <% } %>
+        </div>
+
+        <div id="portfolioConjoinedButtons">
+            <a id="prevButton" onclick="plusSlides(-1)">Prev</a>
+            <a id="nextButton" onclick="plusSlides(1)">Next</a>
+        </div>
+    </div>
+    
+    <div id="experienceSection">
+        <h2 class="header">Experience</h2>
+        <div id="experienceGridContainer">
+            <div class="experienceGrid">
+                <div class="exp-year-container">
+                    <div class="exp-year">2021</div>
+                </div>
+                <div class="exp-circle-container">
+                    <div class="glowing-circle"></div>
+                </div>
+                <div class="exp-identity-container">
+                    <h3 class="exp-identity">Web Developer</h3>
+                </div>
+                <div style="grid-row: span 2;"></div>
+                <div class="exp-line-container">
+                    <div class="exp-line"></div>
+                </div>
+                <div class="exp-company-container">
+                    <h4 class="exp-company">iACADEMY</h4>
+                </div>
+                <p class="exp-desc">
+                    Lorem ipsum dolor sit amet, <span>consectetur adipiscing elit</span>. Proin et pulvinar lorem.
+                    Praesent molestie suscipit ipsum a efficitur. Nullam a facilisis erat. Morbi faucibus varius
+                    est. Aliquam dapibus vehicula pretium. Nam commodo neque mauris, sed imperdiet nibh porta id.
+                    Suspendisse viverra enim in massa volutpat, et commodo lorem volutpat. In eleifend ligula a nisl
+                    rhoncus aliquet. In dolor nibh, fermentum vel pulvinar eget, convallis vitae nisi. Ut urna
+                    velit, facilisis eget ex eu, vestibulum ultrices lacus. Maecenas ligula lacus, faucibus vel
+                    tortor eu, eleifend venenatis tellus. Nam pharetra vel nibh sit amet mattis. Duis fringilla
+                    iaculis congue. Ut a orci dictum, euismod tellus ut, elementum quam.
+                </p>
+            </div>
+            <div class="experienceGrid">
+                <div class="exp-year-container">
+                    <div class="exp-year">2021</div>
+                </div>
+                <div class="exp-circle-container">
+                    <div class="glowing-circle"></div>
+                </div>
+                <div class="exp-identity-container">
+                    <h3 class="exp-identity">Web Developer</h3>
+                </div>
+                <div style="grid-row: span 2;"></div>
+                <div class="exp-line-container">
+                    <div class="exp-line"></div>
+                </div>
+                <div class="exp-company-container">
+                    <h4 class="exp-company">iACADEMY</h4>
+                </div>
+                <p class="exp-desc">
+                    Lorem ipsum dolor sit amet, <span>consectetur adipiscing elit</span>. Proin et pulvinar lorem.
+                    Praesent molestie suscipit ipsum a efficitur. Nullam a facilisis erat. Morbi faucibus varius
+                    est. Aliquam dapibus vehicula pretium. Nam commodo neque mauris, sed imperdiet nibh porta id.
+                    Suspendisse viverra enim in massa volutpat, et commodo lorem volutpat. In eleifend ligula a nisl
+                    rhoncus aliquet. In dolor nibh, fermentum vel pulvinar eget, convallis vitae nisi. Ut urna
+                    velit, facilisis eget ex eu, vestibulum ultrices lacus. Maecenas ligula lacus, faucibus vel
+                    tortor eu, eleifend venenatis tellus. Nam pharetra vel nibh sit amet mattis. Duis fringilla
+                    iaculis congue. Ut a orci dictum, euismod tellus ut, elementum quam.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="testimonialSection">
+        <div class="circles-container-2"> 
+            <div class="circles-grid-2">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div id="testimonialGrid">
+            <h2 class="header">Testimonial</h2>
+            <div class="testimonial-img-section">
+                <div class="testimonial-img-background">
+                    <img src="/images/james-bond.png" alt="testimonial">
+                </div>
+            </div>
+            <div class="testimonial-info-line"></div>
+            <div class="testimonial-info">
+                Lorem ipsum dolor sit amet, <span>consectetur adipiscing elit</span>. Proin et pulvinar lorem.
+                Praesent molestie suscipit ipsum a efficitur. Nullam a facilisis erat. Morbi faucibus varius
+                est. Aliquam dapibus vehicula pretium. Nam commodo neque mauris, sed imperdiet nibh porta id.
+                Suspendisse viverra enim in massa volutpat, et commodo lorem volutpat. In eleifend ligula a nisl
+                rhoncus aliquet. In dolor nibh, fermentum vel pulvinar eget, convallis vitae nisi. Ut urna
+                velit, facilisis eget ex eu, vestibulum ultrices lacus. Maecenas ligula lacus, faucibus vel
+                tortor eu, eleifend venenatis tellus. Nam pharetra vel nibh sit amet mattis. Duis fringilla
+                iaculis congue. Ut a orci dictum, euismod tellus ut, elementum quam.
+            </div>
+            <div class="testimonial-author">James Bound</div>
+            <div class="testimonial-author-line"></div>
+            <div class="testimonial-author-desc">CEO, Omisoft</div>
+        </div>
+    </div>
+</div>
+
+<!-- Slideshow and dots functionalities -->
+<script>
+    // If hover on img or text of portfolio, then glow both
+    function mouseOverPortfolio(event) {
+        const portfolioImages = document.querySelectorAll(".portfolio");
+        const portfolioLinks = document.querySelectorAll(".portfolio-name > a");
+        mouseOutPortfolio();
+
+        // if event caller is an img or a
+        if (event.tagName === "IMG") {
+            const portfolioLink = event.parentElement.parentElement.querySelector(".portfolio-name > a");
+            
+            portfolioLink.classList.add("hovered");
+            event.classList.add("hovered");
+
+        } else if (event.tagName === "A") {
+            const targetPortfolioImage = event.parentElement.parentElement.querySelector(".portfolio");
+
+            targetPortfolioImage.classList.add("hovered");
+            event.classList.add("hovered");
+        }
+    }
+
+    function mouseOutPortfolio() {
+        const portfolioImages = document.querySelectorAll(".portfolio");
+        const portfolioLinks = document.querySelectorAll(".portfolio-name > a");
+
+        portfolioImages.forEach(img => {
+            img.classList.remove("hovered");
+        });
+
+        portfolioLinks.forEach(link => {
+            link.classList.remove("hovered");
+        });
+    }
+
+    // In this case slideshow index starts from 1 instead of 0 
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("portfolio-grid");
+        let dots = document.getElementsByClassName("dot");
+        // If slideIndex is more than the length of slides then it goes back to the 1st slide
+        if (n > slides.length) { slideIndex = 1 }
+        // If slideIndex is less than index 1 of slideIndex then it goes to the last slideIndex
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "grid";
+        dots[slideIndex-1].className += " active";
+    }
+</script>

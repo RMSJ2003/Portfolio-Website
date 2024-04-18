@@ -1,0 +1,144 @@
+<script>
+    window.addEventListener("load", () => {
+        const socials = document.getElementById("mainPage");
+        socials.classList.add("transition-about-page");
+
+        navItemsHighlighting();
+
+        window.addEventListener('scroll', navItemsHighlighting);
+
+        // Smooth scroll to portfolio page if there is a search result.
+        <% if (searchResult) { %>
+            smoothScroll("#portfolioPage");
+        <% } %>
+
+        // Check if noResult flag is present and show alert
+        <% if (req.query.noResult) { %>
+            alert("No search result found");
+        <% } %>
+
+        // PFP size transitioning between screen widths
+        // setPfp();
+
+        function navItemsHighlighting() {
+            const scrollPosition = window.scrollY;
+
+            const portfolioSectionPosition = document.getElementById('portfolioSection').offsetTop;
+            const contactSectionPosition = document.getElementById('contactPage').offsetTop;
+
+            const viewportWidth = window.innerWidth;
+
+            // For nonhamburger nav bar
+            if (viewportWidth >= 801) {
+                const aboutItem = document.querySelector('.menu-section > .menu-item[href="#mainPage"]');
+                const portfolioItem = document.querySelector('.menu-section > .menu-item[href="#portfolioPage"]');
+                const contactItem = document.querySelector('.menu-section > .menu-item[href="#contactPage"]');
+
+                checkScrollPositionMatch(aboutItem, portfolioItem, contactItem);
+            } else if (viewportWidth <= 800) { //For hamburger nav bar
+                const aboutItem = document.querySelector('#showedNavItems > .menu-item[href="#mainPage"]');
+                const portfolioItem = document.querySelector('#showedNavItems > .menu-item[href="#portfolioPage"]');
+                const contactItem = document.querySelector('#showedNavItems > .menu-item[href="#contactPage"]');
+
+                checkScrollPositionMatch(aboutItem, portfolioItem, contactItem);
+            }
+
+            function isScrolledToBottom() {
+                const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+                const clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+
+                return scrollTop + clientHeight >= scrollHeight - 100;
+            }
+
+            function checkScrollPositionMatch(aboutItem, portfolioItem, contactItem) {
+                if (scrollPosition >= contactSectionPosition - 200 || isScrolledToBottom()) {
+                    highlightNavItem(contactItem, [aboutItem, portfolioItem]);
+                    document.title = "Contact";
+                }
+                else if (scrollPosition >= portfolioSectionPosition - 200) {
+                    highlightNavItem(portfolioItem, [aboutItem, contactItem]);
+                    document.title = "Portfolio";
+                }
+                else if (scrollPosition >= 0) {
+                    highlightNavItem(aboutItem, [contactItem, portfolioItem]);
+                    document.title = "About";
+                }
+            }
+
+            function highlightNavItem(highlightItem, unhighlights) {
+                // Check if highlightItem is a DOM element
+                if (!(highlightItem instanceof Element)) {
+                    throw new TypeError('highlightItem must be a DOM element');
+                }
+
+                // Check if unhighlights is an array
+                if (!Array.isArray(unhighlights)) {
+                    throw new TypeError('unhighlights must be an array');
+                }
+
+                // Actual function's logic
+                highlightItem.classList.add('active');
+
+                unhighlights.forEach(item => {
+                    item.classList.remove('active');
+                });
+            }
+        }
+
+        // Smooth scroll function
+        function smoothScroll(target) {
+            const element = document.querySelector(target);
+            if (element) {
+                window.scrollTo({
+                    top: element.offsetTop,
+                    behavior: 'smooth' // Smooth scroll behavior
+                });
+            }
+        }
+
+        // Add click event listener to all menu items and contact me button to smoothly redirect user to the page
+        const menuItems = document.querySelectorAll('.menu-item');
+        menuItems.forEach(item => {
+            item.addEventListener('click', redirectBtnClicked);
+        });
+        document.getElementById('contactButton').addEventListener('click', redirectBtnClicked);
+
+        function redirectBtnClicked(event) {
+            // Prevent default behavior (immediate jump)
+            event.preventDefault();
+            // Get target section from href attribute
+            const target = this.getAttribute('href');
+            // Smooth scroll to target section
+            smoothScroll(target);
+        }
+    });
+
+    // // PFP transition effect between changing screen width
+    // window.addEventListener("resize", setPfp);
+
+    // function setPfp() {
+    //     const pfpContainer = document.querySelector(".pfp-container");
+    //     if (window.innerWidth <= 1100) {
+    //         pfpContainer.classList.add("hidden");
+
+    //         setTimeout(() => {
+    //             pfpContainer.style.display = "none";
+    //         }, 200);
+    //     } else if (window.innerWidth > 1100) {
+    //         pfpContainer.style.display = "flex";
+
+    //         setTimeout(() => {
+    //             pfpContainer.classList.remove("hidden");
+    //         }, 200);
+    //     }
+    // }
+
+    
+
+</script>
+
+
+</body>
+
+</html>

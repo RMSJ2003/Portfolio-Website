@@ -1,0 +1,97 @@
+<%- include("partials/header.ejs") %>
+
+    <%- include("partials/navbar.ejs") %>
+
+        <!-- About Page -->
+        <div id="mainPage">
+            <div id="introSection">
+                <div id="info">
+                    <div id="nameSection">
+                        I'M <h1><%= fullName %></h1>
+                    </div>
+                    <h2 id="identity">
+                        <% for( let index = 0; index < identity.length; index++ ) { %>
+                            <%= index === identity.length - 1 ? identity[index] : identity[index] + ", "%>
+                        <% } %>
+                    </h2>
+                    <div>
+                        <a href="#contactPage" id="contactButton">Contact Me</a>
+                    </div>
+                    <div class="pfp-container">
+                        <img src="/images/my-pic.png" alt="my picture" class="pfp">
+                    </div>
+                </div>
+                <div id="socialsSection">
+                    <div id="socials">
+                        <div id="line">
+                        </div>                        
+                        <% socials.forEach(social => { %>
+                            <a href="<%= social.link %>" target="_blank" id="<%= social.id %>" class="social-icon"></a>
+                            <style>
+                                #<%= social.id %> {
+                                    background-image: url("<%= social.imgURL %>");
+                                }
+    
+                                #<%= social.id %>:hover {
+                                    background-image: url("<%= social.hoveredImgURL %>");
+                                }
+                            </style>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+
+            <div id="aboutSection">
+                <h2 class="header">About</h2>
+                <div id="aboutLineSection">
+                    <div id="aboutLine"></div>
+                </div>
+                <div id="aboutTextSection">
+                    <p>
+                        Hi there! I'm Richard M. Sahagun Jr., a passionate <span>web developer</span> with a love for crafting beautiful and 
+                        functional digital experiences. I'm currently a 2nd-year college student at iACADEMY, where I'm pursuing my degree in 
+                        Bachelor of Science in Information Technology (BSIT). Additionally, I completed an intensive web development bootcamp at Angela Yu's, where I immersed 
+                        myself in full-stack development technologies. Through hands-on projects and mentorship, I learned the latest frameworks 
+                        and best practices in front-end and back-end development. I've been immersed in the world of web development for 2 years.
+                    </p>
+                </div>
+            </div>
+
+            <div id="skillsSection">
+                <h2 class="header">My Skills</h2>
+                <div id="skillsGrid">
+
+                    <% skills.forEach(skill=> { %>
+                        <div class="skill">
+                            <img src="<%= skill.imgSource %>" alt="<%= skill.alt %>">
+                            <h4 class="skill-name">
+                                <%= skill.name %>
+                            </h4>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+            <div class="circles-container">
+                <div class="circles-grid">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+
+        <%- include("partials/portfolioSection.ejs") %>
+
+            <%- include("partials/contactSection.ejs") %>
+                <div id="footer">
+                    <div>"Thanks for Scrolling"</div>
+                </div>
+
+                </div>
+                
+                <%- include("partials/footer.ejs") %>

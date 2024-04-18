@@ -1,0 +1,97 @@
+<div id="navbar">
+    <div class="logo-section">
+        <a href="/">
+            <img src="images/r-logo.png" alt="my logo" class="logo">
+        </a>
+    </div>
+    <div class="menu-section">
+        <a href="#mainPage" class="menu-item">About</a>
+        <a href="#portfolioPage" class="menu-item">Portfolio</a>
+        <a href="#contactPage" class="menu-item">Contact</a>
+    </div>
+    <form action="/search" method="post" class="search-section">
+        <div class="search-bar">
+            <div class="search-icon-container">
+                <button type="submit" class="search-icon"></button>
+            </div>
+            <div class="search-input-container">
+                <input type="text" placeholder="Search..."  name="searchItem" class="search-input">
+            </div>
+        </div>
+    </form>
+    <div id="hamburgerSection">
+        <div id="hamburger" onclick="toggleNavItems()"></div>
+    </div>
+</div>
+
+<!-- Small Window Navbar -->
+<div id="showedNavItems">
+    <a href="#mainPage" class="menu-item">About</a>
+    <a href="#portfolioPage" class="menu-item">Portfolio</a>
+    <a href="#contactPage" class="menu-item">Contact</a>
+</div>
+
+<script>
+
+
+
+    function toggleNavItems() {
+        const showNavItems = document.getElementById("showedNavItems");
+        const hamburger = document.getElementById("hamburger");
+
+        if (showNavItems.style.display === "flex") {
+            showNavItems.classList.toggle("show");
+            hamburger.classList.remove("active");
+
+            setTimeout(() => {
+                showNavItems.style.display = "none";
+            }, 200);
+        } else {
+            showNavItems.style.display = "flex";
+            hamburger.classList.add("active");
+
+
+            // Added a delay so the showNavItems becomes flex first before opacity transition.
+            setTimeout(() => {
+                showNavItems.classList.toggle("show");
+                showedNavItems.style.boxShadow = "0 4px 0px var(--fourth-color), 0 8px 20px rgba(0, 0, 0, 0.2)";
+            }, 100);
+        }
+    }
+
+    window.addEventListener("resize", () => {
+        const showedNavItems = document.getElementById("showedNavItems");
+        if (window.innerWidth >= 801) {
+            showedNavItems.classList.remove("show");
+            hamburger.classList.remove("active");
+
+            setTimeout(() => {
+                showedNavItems.style.display = "none";
+            }, 200);
+        }
+    });
+
+    // Changes navbar background on scrollY.
+    window.addEventListener("scroll", () => {
+        const navbar = document.getElementById("navbar");
+        const showedNavItems = document.getElementById("showedNavItems");
+
+        if (window.scrollY > 0) {
+            navbar.style.backgroundColor = "var(--fourth-color)";
+            navbar.style.boxShadow = "0 4px 0px var(--fourth-color), 0 8px 20px rgba(0, 0, 0, 0.2)";
+        } else {
+            navbar.style.background = "none";
+            navbar.style.boxShadow = "none";
+        }
+    });
+
+    const searchInput = document.querySelector(".search-input");
+    const searchBar = document.querySelector(".search-bar");
+    document.addEventListener("input", () => {
+        if (searchInput.value.trim() !== "") {
+            searchBar.classList.add("expanded");
+        } else {
+            searchBar.classList.remove("expanded");
+        }
+    });
+</script>
