@@ -1,3 +1,5 @@
+This project is in EJS version, and also translated to reactjs version
+
 How to Run:
 1. Open VS Code and its terminal (bash).
 2. cd over to the root folder of this project.
