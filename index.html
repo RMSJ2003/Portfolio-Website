@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Google Fonts: Montserrat and Merriweather -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+
+    <title></title>
+</head>
+
+<body>
+    <div id="navbar">
+        <div class="logo-section">
+            <a href="/">
+                <img src="images/r-logo.png" alt="my logo" class="logo">
+            </a>
+        </div>
+        <div class="menu-section">
+            <a href="#mainPage" class="menu-item">About</a>
+            <a href="#portfolioPage" class="menu-item">Portfolio</a>
+            <a href="#contactPage" class="menu-item">Contact</a>
+        </div>
+        <form action="/search" method="post" class="search-section">
+            <div class="search-bar">
+                <div class="search-icon-container">
+                    <button type="submit" class="search-icon"></button>
+                </div>
+                <div class="search-input-container">
+                    <input type="text" placeholder="Search..."  name="searchItem" class="search-input">
+                </div>
+            </div>
+        </form>
+        <div id="hamburgerSection">
+            <div id="hamburger" onclick="toggleNavItems()"></div>
+        </div>
+    </div>
+    
+    <!-- Small Window Navbar -->
+    <div id="showedNavItems">
+        <a href="#mainPage" class="menu-item">About</a>
+        <a href="#portfolioPage" class="menu-item">Portfolio</a>
+        <a href="#contactPage" class="menu-item">Contact</a>
+    </div>
+
+            <!-- About Page -->
+            <div id="mainPage">
+                <div id="introSection">
+                    <div id="info">
+                        <div id="nameSection">
+                            I'M <h1>Richard M. Sahagun Jr.</h1>
+                        </div>
+                        <h2 id="identity">
+                            Web Developer, College Student
+                        </h2>
+                        <div>
+                            <a href="#contactPage" id="contactButton">Contact Me</a>
+                        </div>
+                        <div class="pfp-container">
+                            <img src="./images/my-pic.png" alt="my picture" class="pfp">
+                        </div>
+                    </div>
+                    <div id="socialsSection">
+                        <div id="socials">
+                            <div id="line">
+                            </div>                        
+                                <a href="https://www.facebook.com/richard.sahagun.14/" target="_blank" id="fb-icon" class="social-icon"></a>
+                                <a href="https://www.linkedin.com/in/richard-sahagun/" target="_blank" id="linkedin-icon" class="social-icon"></a>
+                                <a href="https://profile.indeed.com/p/richards-43q2ksj" target="_blank" id="indeed-icon" class="social-icon"></a>
+                                <a href="https://www.fiverr.com/rj_2003?public_mode=true" target="_blank" id="fiverr-icon" class="social-icon"></a>
+                                <a href="https://www.instagram.com/richard.sahagun.jr/" target="_blank" id="ig-icon" class="social-icon"></a>
+                                <a href="https://www.youtube.com/channel/UCeYcJEoIktdp2jiPT2yj8kA" target="_blank" id="yt-icon" class="social-icon"></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div id="aboutSection">
+                    <h2 class="header">About</h2>
+                    <div id="aboutLineSection">
+                        <div id="aboutLine"></div>
+                    </div>
+                    <div id="aboutTextSection">
+                        <p>
+                            Hi there! I'm Richard M. Sahagun Jr., a passionate <span>web developer student</span> specializing in building clean, responsive websites
+                            and modern full-stack applications. I create dynamic user interfaces with HTML, CSS/SCSS, and JavaScript and build powerful backends 
+                            using Node.js, Express.js, MongoDB, and PostreSQL. My purpose is to solve real-world problems with simple, efficient solutions. I focus on 
+                            performance, clean code, and user-centered design. I'm currently open to freelance projects, part-time roles, or full-time opportunities 
+                            that allow me to grow and help businesses go digital.
+                        </p>
+                    </div>
+                </div>
+    
+                <div id="skillsSection">
+                    <h2 class="header">My Skills</h2>
+                    <div id="skillsGrid">
+                            <div class="skill">
+                                <img src="images/html-logo.png" alt="html logo">
+                                <h4 class="skill-name">
+                                    HTML
+                                </h4>
+                            </div>
+                            <div class="skill">
+                                <img src="images/css-logo.png" alt="css logo">
+                                <h4 class="skill-name">
+                                    CSS
+                                </h4>
+                            </div>
+                            <div class="skill">
+                                <img src="images/sass-logo.png" alt="css logo">
+                                <h4 class="skill-name">
+                                    Sass/SCSS
+                                </h4>
+                            </div>
+                            <div class="skill">
+                                <img src="images/javascript-logo.png" alt="javascript logo">
+                                <h4 class="skill-name">
+                                    JavaScript
+                                </h4>
+                            </div>
+                            <div class="skill">
+                                <img src="images/nodejs-logo.png" alt="nodejs logo">
+                                <h4 class="skill-name">
+                                    NodeJs
+                                </h4>
+                            </div>
+                            <div class="skill">
+                                <img src="images/mongodb-logo.png" alt="css logo">
+                                <h4 class="skill-name">
+                                    MongoDB
+                                </h4>
+                            </div>
+                            <div class="skill">
+                                <img src="images/mongoose-logo.png" alt="css logo">
+                                <h4 class="skill-name">
+                                    Mongoose
+                                </h4>
+                            </div>
+                            <div class="skill">
+                                <img src="images/postgresql-logo.png" alt="css logo">
+                                <h4 class="skill-name">
+                                    PostgreSQL
+                                </h4>
+                            </div>
+                    </div>
+                </div>
+                <div class="circles-container">
+                    <div class="circles-grid">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="portfolioPage">
+                <div id="portfolioSection">
+                    <h2 class="header">Portfolio</h2>
+                            <div class="portfolio-grid fade">
+                                <div class="portfolio-item">
+                                    <a href="https://rmsj2003.github.io/iACADEMY-Welcome-Kit-Dev/" target="_blank">
+                                        <img src="images/iacademy-welcome-kit.png" alt="portfolio showcase" class="portfolio" onmouseover="mouseOverPortfolio(this)" onmouseout="mouseOutPortfolio(this)">  
+                                    </a>
+                                    <h4 class="portfolio-name">
+                                        <a href="https://rmsj2003.github.io/iACADEMY-Welcome-Kit-Dev/" target="_blank" onmouseover="mouseOverPortfolio(this)" onmouseout="mouseOutPortfolio(this)">
+                                            iACADEMY Welcome Kit 2024
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+
+
+                    <div class="portfolio-dots">
+                        <!-- add 1 to the parameter sa you add more dots -->
+                         <!-- add a dot every 6 portoflio -->
+                            <div class="dot" onclick="currentSlide(1)"></div>
+                    </div>
+            
+                    <div id="portfolioConjoinedButtons">
+                        <a id="prevButton" onclick="plusSlides(-1)">Prev</a>
+                        <a id="nextButton" onclick="plusSlides(1)">Next</a>
+                    </div>
+                </div>
+                
+                <div id="experienceSection">
+                    <h2 class="header">Experience</h2>
+                    <div id="experienceGridContainer">
+                            <div class="experienceGrid">
+                                <div class="exp-year-container">
+                                    <div class="exp-year">2021</div>
+                                </div>
+                                <div class="exp-circle-container">
+                                    <div class="glowing-circle"></div>
+                                </div>
+                                <div class="exp-identity-container">
+                                    <h3 class="exp-identity">Web Developer & Assistant Manager</h3>
+                                </div>
+                                <div style="grid-row: span 2;"></div>
+                                <div class="exp-line-container">
+                                    <div class="exp-line"></div>
+                                </div>
+                                <div class="exp-company-container">
+                                    <h4 class="exp-company">Speedwave Event Sounds Rental</h4>
+                                </div>
+                                <p class="exp-desc">
+                                    
+        In 2021, I worked as a Web Developer at Speedwave Event Sounds Rental, a top provider of audio-visual equipment for events. My role involved 
+        boosting the company's online presence and expanding its market reach. I collaborated with management to understand offerings and audience, 
+        then built a dynamic website to showcase our extensive services and equipment inventory. Challenges included designing a user-friendly 
+        interface to highlight LED walls, speakers, stages, and more. I also took on Assistant Manager responsibilities, managing operational tasks 
+        like quotations, emails, and customer interactions across platforms. Additionally, I handled administrative duties such as billing 
+        statements and contracts, ensuring smooth transactions and compliance. As Assistant Manager, I coordinated with internal teams to fulfill 
+        customer needs efficiently, fostering collaboration for exceptional results. My dual role demonstrated commitment, adaptability, and 
+        leadership, contributing to business growth and customer satisfaction.        
+        
+                                </p>
+                            </div>
+                    </div>
+                </div>
+                
+                <div id="testimonialSection">
+                    <div class="circles-container-2"> 
+                        <div class="circles-grid-2">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                    <div id="testimonialGrid">
+                        <h2 class="header">Testimonial</h2>
+                        <div class="testimonial-img-section">
+                            <div class="testimonial-img-background">
+                                <img src="images/client-1.png" alt="testimonial">
+                            </div>
+                        </div>
+                        <div class="testimonial-info-line"></div>
+                        <div class="testimonial-info">
+                            Richard exceeded expectations! He built a smooth, responsive website for our cabin rental business and integrated 
+                            payment functionality seamlessly. Highly recommended for his professionalism and fast delivery.
+                        </div>
+                        <div class="testimonial-author">Andie Francis</div>
+                        <div class="testimonial-author-line"></div>
+                        <div class="testimonial-author-desc">Superhost, Airbnb</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contactPage">
+                <div class="contact-header-container">
+                    <div class="contact-header-left-line"></div>
+                    <h2 class="header">Contact Me</h2>
+                    <div class="contact-header-right-line"></div>
+                </div>
+                <div id="contactInfosContainer">
+                        <div class="contact-info-container">
+                            <img src="images/email-logo.png" alt="email logo">
+                            <a href="mailto:richardmontemayorsahagunjr@gmail.com" target="_blank">
+                                <h4>richardmontemayorsahagunjr@gmail.com</h4>
+                            </a>
+                        </div>
+                        <div class="contact-info-container">
+                            <img src="images/phone-logo.png" alt="phone logo">
+                            <a href="tel:09154770790" target="_blank">
+                                <h4>0954-315-4141</h4>
+                            </a>
+                        </div>
+                        <div class="contact-info-container">
+                            <img src="images/location-logo.png" alt="location logo">
+                            <a href="mailto:https://maps.app.goo.gl/1gqmoHvuGdeJJdk68" target="_blank">
+                                <h4>Makati City, Philippines</h4>
+                            </a>
+                        </div>
+                </div>
+                <div class="contact-socials-container">
+                    <div class="contact-socials-left-line"></div>
+                       <a href="https://www.facebook.com/richard.sahagun.14/" target="_blank" id="fb-icon2" class="social-icon"></a>
+                        <a href="https://www.linkedin.com/in/richard-sahagun/" target="_blank" id="linkedin-icon2" class="social-icon"></a>
+                        <a href="https://profile.indeed.com/p/richards-43q2ksj" target="_blank" id="indeed-icon2" class="social-icon"></a>
+                        <a href="https://www.fiverr.com/rj_2003?public_mode=true" target="_blank" id="fiverr-icon2" class="social-icon"></a>
+                        <a href="https://www.instagram.com/richard.sahagun.jr/" target="_blank" id="ig-icon2" class="social-icon"></a>
+                        <a href="https://www.youtube.com/channel/UCeYcJEoIktdp2jiPT2yj8kA" target="_blank" id="yt-icon2" class="social-icon"></a>
+
+                    <div class="contact-socials-right-line"></div>
+                </div>
+            </div>
+
+            <div id="footer">
+                <div>"Thanks for Scrolling"</div>
+            </div>
+
+            </div>
+            
+            <!-- fOR PORTFOLIO SECTION 
+            Slideshow and dots functionalities -->
+            <script>
+                // If hover on img or text of portfolio, then glow both
+                function mouseOverPortfolio(event) {
+                    const portfolioImages = document.querySelectorAll(".portfolio");
+                    const portfolioLinks = document.querySelectorAll(".portfolio-name > a");
+                    mouseOutPortfolio();
+            
+                    // if event caller is an img or a
+                    if (event.tagName === "IMG") {
+                        const portfolioLink = event.parentElement.parentElement.querySelector(".portfolio-name > a");
+                        
+                        portfolioLink.classList.add("hovered");
+                        event.classList.add("hovered");
+            
+                    } else if (event.tagName === "A") {
+                        const targetPortfolioImage = event.parentElement.parentElement.querySelector(".portfolio");
+            
+                        targetPortfolioImage.classList.add("hovered");
+                        event.classList.add("hovered");
+                    }
+                }
+            
+                function mouseOutPortfolio() {
+                    const portfolioImages = document.querySelectorAll(".portfolio");
+                    const portfolioLinks = document.querySelectorAll(".portfolio-name > a");
+            
+                    portfolioImages.forEach(img => {
+                        img.classList.remove("hovered");
+                    });
+            
+                    portfolioLinks.forEach(link => {
+                        link.classList.remove("hovered");
+                    });
+                }
+            
+                // In this case slideshow index starts from 1 instead of 0 
+                let slideIndex = 1;
+                showSlides(slideIndex);
+            
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+            
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+            
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("portfolio-grid");
+                    let dots = document.getElementsByClassName("dot");
+                    // If slideIndex is more than the length of slides then it goes back to the 1st slide
+                    if (n > slides.length) { slideIndex = 1 }
+                    // If slideIndex is less than index 1 of slideIndex then it goes to the last slideIndex
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "grid";
+                    dots[slideIndex-1].className += " active";
+                }
+            </script>
+
+
+    <!-- For Nav -->
+    <script>
+
+
+
+        function toggleNavItems() {
+            const showNavItems = document.getElementById("showedNavItems");
+            const hamburger = document.getElementById("hamburger");
+    
+            if (showNavItems.style.display === "flex") {
+                showNavItems.classList.toggle("show");
+                hamburger.classList.remove("active");
+    
+                setTimeout(() => {
+                    showNavItems.style.display = "none";
+                }, 200);
+            } else {
+                showNavItems.style.display = "flex";
+                hamburger.classList.add("active");
+    
+    
+                // Added a delay so the showNavItems becomes flex first before opacity transition.
+                setTimeout(() => {
+                    showNavItems.classList.toggle("show");
+                    showedNavItems.style.boxShadow = "0 4px 0px var(--fourth-color), 0 8px 20px rgba(0, 0, 0, 0.2)";
+                }, 100);
+            }
+        }
+    
+        window.addEventListener("resize", () => {
+            const showedNavItems = document.getElementById("showedNavItems");
+            if (window.innerWidth >= 801) {
+                showedNavItems.classList.remove("show");
+                hamburger.classList.remove("active");
+    
+                setTimeout(() => {
+                    showedNavItems.style.display = "none";
+                }, 200);
+            }
+        });
+    
+        // Changes navbar background on scrollY.
+        window.addEventListener("scroll", () => {
+            const navbar = document.getElementById("navbar");
+            const showedNavItems = document.getElementById("showedNavItems");
+    
+            if (window.scrollY > 0) {
+                navbar.style.backgroundColor = "var(--fourth-color)";
+                navbar.style.boxShadow = "0 4px 0px var(--fourth-color), 0 8px 20px rgba(0, 0, 0, 0.2)";
+            } else {
+                navbar.style.background = "none";
+                navbar.style.boxShadow = "none";
+            }
+        });
+    
+        const searchInput = document.querySelector(".search-input");
+        const searchBar = document.querySelector(".search-bar");
+        document.addEventListener("input", () => {
+            if (searchInput.value.trim() !== "") {
+                searchBar.classList.add("expanded");
+            } else {
+                searchBar.classList.remove("expanded");
+            }
+        });
+    </script>
+    
+    <script>
+        window.addEventListener("load", () => {
+            const socials = document.getElementById("mainPage");
+            socials.classList.add("transition-about-page");
+    
+            navItemsHighlighting();
+    
+            window.addEventListener('scroll', navItemsHighlighting);
+    
+            // PFP size transitioning between screen widths
+            // setPfp();
+    
+            function navItemsHighlighting() {
+                const scrollPosition = window.scrollY;
+    
+                const portfolioSectionPosition = document.getElementById('portfolioSection').offsetTop;
+                const contactSectionPosition = document.getElementById('contactPage').offsetTop;
+    
+                const viewportWidth = window.innerWidth;
+    
+                // For nonhamburger nav bar
+                if (viewportWidth >= 801) {
+                    const aboutItem = document.querySelector('.menu-section > .menu-item[href="#mainPage"]');
+                    const portfolioItem = document.querySelector('.menu-section > .menu-item[href="#portfolioPage"]');
+                    const contactItem = document.querySelector('.menu-section > .menu-item[href="#contactPage"]');
+    
+                    checkScrollPositionMatch(aboutItem, portfolioItem, contactItem);
+                } else if (viewportWidth <= 800) { //For hamburger nav bar
+                    const aboutItem = document.querySelector('#showedNavItems > .menu-item[href="#mainPage"]');
+                    const portfolioItem = document.querySelector('#showedNavItems > .menu-item[href="#portfolioPage"]');
+                    const contactItem = document.querySelector('#showedNavItems > .menu-item[href="#contactPage"]');
+    
+                    checkScrollPositionMatch(aboutItem, portfolioItem, contactItem);
+                }
+    
+                function isScrolledToBottom() {
+                    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                    const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+                    const clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+    
+                    return scrollTop + clientHeight >= scrollHeight - 100;
+                }
+    
+                function checkScrollPositionMatch(aboutItem, portfolioItem, contactItem) {
+                    if (scrollPosition >= contactSectionPosition - 200 || isScrolledToBottom()) {
+                        highlightNavItem(contactItem, [aboutItem, portfolioItem]);
+                        document.title = "Contact";
+                    }
+                    else if (scrollPosition >= portfolioSectionPosition - 200) {
+                        highlightNavItem(portfolioItem, [aboutItem, contactItem]);
+                        document.title = "Portfolio";
+                    }
+                    else if (scrollPosition >= 0) {
+                        highlightNavItem(aboutItem, [contactItem, portfolioItem]);
+                        document.title = "About";
+                    }
+                }
+    
+                function highlightNavItem(highlightItem, unhighlights) {
+                    // Check if highlightItem is a DOM element
+                    if (!(highlightItem instanceof Element)) {
+                        throw new TypeError('highlightItem must be a DOM element');
+                    }
+    
+                    // Check if unhighlights is an array
+                    if (!Array.isArray(unhighlights)) {
+                        throw new TypeError('unhighlights must be an array');
+                    }
+    
+                    // Actual function's logic
+                    highlightItem.classList.add('active');
+    
+                    unhighlights.forEach(item => {
+                        item.classList.remove('active');
+                    });
+                }
+            }
+    
+            // Smooth scroll function
+            function smoothScroll(target) {
+                const element = document.querySelector(target);
+                if (element) {
+                    window.scrollTo({
+                        top: element.offsetTop,
+                        behavior: 'smooth' // Smooth scroll behavior
+                    });
+                }
+            }
+    
+            // Add click event listener to all menu items and contact me button to smoothly redirect user to the page
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('click', redirectBtnClicked);
+            });
+            document.getElementById('contactButton').addEventListener('click', redirectBtnClicked);
+    
+            function redirectBtnClicked(event) {
+                // Prevent default behavior (immediate jump)
+                event.preventDefault();
+                // Get target section from href attribute
+                const target = this.getAttribute('href');
+                // Smooth scroll to target section
+                smoothScroll(target);
+            }
+        });
+    
+        // // PFP transition effect between changing screen width
+        // window.addEventListener("resize", setPfp);
+    
+        // function setPfp() {
+        //     const pfpContainer = document.querySelector(".pfp-container");
+        //     if (window.innerWidth <= 1100) {
+        //         pfpContainer.classList.add("hidden");
+    
+        //         setTimeout(() => {
+        //             pfpContainer.style.display = "none";
+        //         }, 200);
+        //     } else if (window.innerWidth > 1100) {
+        //         pfpContainer.style.display = "flex";
+    
+        //         setTimeout(() => {
+        //             pfpContainer.classList.remove("hidden");
+        //         }, 200);
+        //     }
+        // }
+    
+        
+    
+    </script>
+    
+    
+</body>
+    
+</html>
